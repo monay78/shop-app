@@ -1,0 +1,12 @@
+<ul>
+  <div *ngFor="let guitar of guitarsObservable | async">
+    <ngb-alert type="info" [dismissible]="false">
+      <h3><a href="{{guitar.url}}">{{guitar.title}}</a></h3>
+      <p>{{guitar.name}}<br>{{guitar.description}}<br>${{guitar.price}}<br>{{guitar.rating}} rating<br>Sold by {{guitar.seller}}<br>{{guitar.warranty}}</p>
+
+      <div>
+        <a href="{{guitar.url}}" target="_blank" class="btn btn-danger">See Guitar</a>
+      </div>
+    </ngb-alert>
+  </div>
+</ul>
